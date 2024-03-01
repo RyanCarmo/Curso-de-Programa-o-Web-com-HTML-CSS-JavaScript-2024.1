@@ -1,33 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simulação de Requisição Assíncrona</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Async Function Example</title>
 </head>
 <body>
 
-<h1>Simulação de Requisição Assíncrona</h1>
+  <h1>Async Function Example</h1>
 
-<script>
-async function obterInformacoes(objeto, callback) {
-    setTimeout(() => {
+  <script>
+    async function obterInformacoes(objeto, callback) {
+      setTimeout(() => {
         callback(objeto);
-    }, 1000);
-}
-function mostrarInformacoes(objeto) {
-    console.log("Informações do usuário:");
-    console.log("ID:", objeto.id);
-    console.log("Nome:", objeto.nome);
-    console.log("E-mail:", objeto.email);
-}
-const usuario = {
-    id: 1,
-    nome: 'Marcos',
-    email: 'marcos@mail.com'
-};
-obterInformacoes(usuario, mostrarInformacoes);
-</script>
+      }, 1000);
+    }
+
+    function mostrarNoTerminal(objeto) {
+      console.log("Informações do usuário:");
+      console.log("ID:", objeto.id);
+      console.log("Nome:", objeto.nome);
+      console.log("Email:", objeto.email);
+    }
+
+    function mostrarNaPagina(objeto) {
+      const infoElement = document.createElement("div");
+      infoElement.innerHTML = `
+        <p>ID: ${objeto.id}</p>
+        <p>Nome: ${objeto.nome}</p>
+        <p>Email: ${objeto.email}</p>
+      `;
+      document.body.appendChild(infoElement);
+    }
+
+    const usuario = {
+      id: 1,
+      nome: 'Marcos',
+      email: 'marcos@mail.com'
+    };
+    obterInformacoes(usuario, mostrarNoTerminal);
+    obterInformacoes(usuario, mostrarNaPagina);
+  </script>
 
 </body>
 </html>

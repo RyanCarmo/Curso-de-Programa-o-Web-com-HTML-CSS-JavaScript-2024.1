@@ -1,31 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Multiplicar Números por 2 com Callback</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Example</title>
 </head>
 <body>
+    <h1>Callback Example</h1>
+    <p id="output"></p>
 
-<h1>Multiplicar Números por 2 com Callback</h1>
-
-<script>
-function multiplicarPorDois(array, callback) {
-    const novoArray = [];
-
-    for (let i = 0; i < array.length; i++) {
-        const resultado = callback(array[i]);
-        novoArray.push(resultado);
-    }
-    return novoArray;
-}
-function multiplicarPorDoisCallback(numero) {
-    return numero * 2;
-}
-const numeros = [1, 2, 3, 4, 5];
-const resultado = multiplicarPorDois(numeros, multiplicarPorDoisCallback);
-console.log("Novo array após multiplicação por 2:", resultado);
-</script>
-
+    <script src="script(Tarefa 1).js"></script>
 </body>
 </html>
