@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link ref = "stylesheet" href="styles.css">
+    <title>Lista de Tarefas</title>
+</head>
+<body>
+    <div>
+        <div>
+            <h1>lista de Tarefas</h1>
+        </div>
+        <div>
+            <input type="text" id="taskInput" placeholder="adicionar nova tarefa">
+            <button onclick="addTask()">adicionar</button>
+            <div>
+                <ul id="taskList"></ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        function addTask(){
+            let taskInput = document.getElementById
+            ("taskInput");
+            let taskList = document.getElementById
+            ("taskList");
+
+        if(taskInput.value.trim() !== ""){''
+            let li = document.createElement("li")
+            let span = document.createElement("span")
+            let deletebutton = document.createElement("button")
+            let updatebutton = document.createElement("button")
+            let donebutton = document.createElement("button")
+            
+            taskList.appendChild(li)
+            span.textContent = taskInput.value
+            deletebutton.textContent = "Apagar"
+            updatebutton.textContent = "Atualizar"
+            donebutton.textContent = "Feito"
+    
+            deletebutton.onclick = () => {
+                taskList.removeChild(li)
+            }
+            updatebutton.onclick = () => {
+                let newtask = prompt("Editar tarefa:", span.textContent);
+                if(newtask !== null && newtask.trim() !== ""){
+                    span.textContent = newtask;
+                }
+                donebutton.onclick = () => {
+                    span.classlist.toggle("completed")
+                }
+            
+            }
+        } 
+        
+        else(
+            alert("Por favor, insira uma tarefa valida!")
+        )
+        
+        }
+    </script>
+</body>
+</html>
