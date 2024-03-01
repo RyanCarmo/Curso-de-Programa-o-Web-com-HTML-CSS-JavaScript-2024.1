@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lista de Marcas de Carros que Começam com "F"</title>
+</head>
+<body>
+
+<h1>Lista de Marcas de Carros que Começam com "F"</h1>
+
+<script>
+
+const carros = {
+    marcas: ["Fiat", "Chevrolet", "Ford", "Volkswagen"]
+};
+
+
+function filtrarMarcasComF(objeto) {
+    const marcasComF = objeto.marcas.filter(function(marca) {
+        return marca.startsWith("F");
+    });
+    return marcasComF;
+}
+
+
+const marcasComF = filtrarMarcasComF(carros);
+console.log("Marcas de carros que começam com 'F':", marcasComF);
+</script>
+
+</body>
+</html>

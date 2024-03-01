@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menor Número em um Array</title>
+</head>
+<body>
+
+<script>
+
+var numeros = [9, 2, 5, 90, 370];
+
+
+var menorNumero = numeros[0];
+
+
+for (var i = 1; i < numeros.length; i++) {
+    if (numeros[i] < menorNumero) {
+        menorNumero = numeros[i];
+    }
+}
+
+
+console.log("O menor número no array é:", menorNumero);
+</script>
+
+</body>
+</html>

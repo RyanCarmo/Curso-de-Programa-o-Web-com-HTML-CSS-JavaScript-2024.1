@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maior Nome em uma Lista de Nomes</title>
+</head>
+<body>
+
+<h1>Maior Nome em uma Lista de Nomes</h1>
+
+<script>
+
+const listaDeNomes = {
+    nomes: ["João", "Maria", "Pedro", "Ana", "Rafaela"]
+};
+
+
+function encontrarMaiorNome(objeto) {
+    let maiorNome = "";
+    for (let nome of objeto.nomes) {
+        if (nome.length > maiorNome.length) {
+            maiorNome = nome;
+        }
+    }
+    return maiorNome;
+}
+
+
+const maiorNome = encontrarMaiorNome(listaDeNomes);
+console.log("O maior nome na lista de nomes é:", maiorNome);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Encontrar Propriedade com Valor 0</title>
+</head>
+<body>
+
+<h1>Encontrar Propriedade com Valor 0</h1>
+
+<script>
+
+const livros = {
+    'O Iluminado': 50,
+    'Os sete maridos de Evelyn Hugo': 60,
+    'O Hobbit': 0
+};
+
+
+function encontrarPropriedadeComValorZero(objeto) {
+    for (let livro in objeto) {
+        if (objeto[livro] === 0) {
+            return livro;
+        }
+    }
+    return "Nenhuma propriedade com valor zero encontrada.";
+}
+
+
+const livroComValorZero = encontrarPropriedadeComValorZero(livros);
+console.log("Livro com valor 0:", livroComValorZero);
+</script>
+
+</body>
+</html>

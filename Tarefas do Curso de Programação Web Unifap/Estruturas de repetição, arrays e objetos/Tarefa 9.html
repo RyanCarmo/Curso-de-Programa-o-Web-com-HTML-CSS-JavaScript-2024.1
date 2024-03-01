@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verificar se um Objeto está Vazio</title>
+</head>
+<body>
+
+<h1>Verificar se um Objeto está Vazio</h1>
+
+<script>
+
+function objetoEstaVazio(objeto) {
+    return Object.keys(objeto).length === 0;
+}
+
+
+var objetoVazio = {};
+var objetoNaoVazio = {nome: "Ryan", idade: 22};
+
+
+console.log("O objeto está vazio?", objetoEstaVazio(objetoVazio)); 
+console.log("O objeto está vazio?", objetoEstaVazio(objetoNaoVazio)); 
+</script>
+
+</body>
+</html>

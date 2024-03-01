@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulação de Requisição Assíncrona</title>
+</head>
+<body>
+
+<h1>Simulação de Requisição Assíncrona</h1>
+
+<script>
+async function obterInformacoes(objeto, callback) {
+    setTimeout(() => {
+        callback(objeto);
+    }, 1000);
+}
+function mostrarInformacoes(objeto) {
+    console.log("Informações do usuário:");
+    console.log("ID:", objeto.id);
+    console.log("Nome:", objeto.nome);
+    console.log("E-mail:", objeto.email);
+}
+const usuario = {
+    id: 1,
+    nome: 'Marcos',
+    email: 'marcos@mail.com'
+};
+obterInformacoes(usuario, mostrarInformacoes);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soma Total de Valores em uma Lista de Compras</title>
+</head>
+<body>
+
+<h1>Soma Total de Valores em uma Lista de Compras</h1>
+
+<script>
+
+var ListaDeCompras = {
+    produtos: {
+        "Arroz": 2,
+        "Feijão": 5,
+        "Carne": 7,
+        "Batata": 8
+    }
+};
+
+
+function calcularSomaTotal(objeto) {
+    var soma = 0;
+    for (var produto in objeto) {
+        soma += objeto[produto];
+    }
+    return soma;
+}
+
+
+var somaTotal = calcularSomaTotal(ListaDeCompras.produtos);
+
+
+console.log("A soma total dos valores dos produtos é:", somaTotal);
+</script>
+
+</body>
+</html>

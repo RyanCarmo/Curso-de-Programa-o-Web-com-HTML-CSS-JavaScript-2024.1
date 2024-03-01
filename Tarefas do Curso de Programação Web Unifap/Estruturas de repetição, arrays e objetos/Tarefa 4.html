@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Primeira Letra de Cada Elemento</title>
+</head>
+<body>
+
+<script>
+
+var array = ["Mamao", "Banana", "Cereja"];
+
+
+var primeirasLetras = array.map(function(elemento) {
+    return elemento.slice(0, 1);
+});
+
+
+console.log("Primeira letra de cada elemento:", primeirasLetras);
+</script>
+
+</body>
+</html>

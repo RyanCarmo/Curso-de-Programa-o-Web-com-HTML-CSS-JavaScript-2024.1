@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soma dos Quadrados dos Números Pares</title>
+</head>
+<body>
+
+<h1>Soma dos Quadrados dos Números Pares</h1>
+
+<script>
+const somaQuadradosPares = (array) => {
+    const quadradosPares = array.filter(num => num % 2 === 0).map(num => num ** 2);
+    const soma = quadradosPares.reduce((acc, curr) => acc + curr, 0);
+    return soma;
+}
+const numeros = [1, 2, 3, 4, 5, 6];
+const resultado = somaQuadradosPares(numeros);
+console.log("A soma dos quadrados dos números pares é:", resultado);
+</script>
+
+</body>
+</html>

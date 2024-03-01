@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Filtrar Strings com Mais de 5 Caracteres</title>
+</head>
+<body>
+
+<h1>Filtrar Strings com Mais de 5 Caracteres</h1>
+
+<script>
+function filtrarStrings(array) {
+    var novaArray = [];
+    for (var i = 0; i < array.length; i++) {
+        if (array[i].length > 5) {
+            novaArray.push(array[i]);
+        }
+    }
+    return novaArray;
+}
+var strings = ["banana", "abacaxi", "laranja", "uva", "melancia", "morango"];
+var resultado = filtrarStrings(strings);
+console.log("Strings com mais de 5 caracteres:", resultado);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soma de Números em um Array</title>
+</head>
+<body>
+
+<h1>Soma de Números em um Array</h1>
+
+<script>
+function calcularSoma(array) {
+    var soma = 0;
+    for (var i = 0; i < array.length; i++) {
+        soma += array[i];
+    }
+    return soma;
+}
+var numeros = [3, 2, 3, 8, 5];
+var resultado = calcularSoma(numeros);
+console.log("A soma dos números é:", resultado);
+</script>
+
+</body>
+</html>

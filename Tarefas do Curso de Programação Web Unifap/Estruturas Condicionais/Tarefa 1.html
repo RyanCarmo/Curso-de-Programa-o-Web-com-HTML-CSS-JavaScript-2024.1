@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verificar Permissão do Usuário</title>
+</head>
+<body>
+
+<h1>Verificar Permissão do Usuário</h1>
+
+<form id="permissaoForm">
+    <label for="tipoPermissao">Selecione o tipo de permissão:</label>
+    <select id="tipoPermissao">
+        <option value="Comum">Comum</option>
+        <option value="Gerente">Gerente</option>
+        <option value="Diretor">Diretor</option>
+    </select>
+    <button type="button" onclick="verificarPermissao()">Verificar</button>
+</form>
+
+<script>
+function verificarPermissao() {
+    var tipoPermissao = document.getElementById("tipoPermissao").value;
+
+    switch (tipoPermissao) {
+        case "Comum":
+            console.log("Permissão concedida: Usuário Comum");
+            break;
+        case "Gerente":
+            console.log("Permissão concedida: Gerente");
+            break;
+        case "Diretor":
+            console.log("Permissão concedida: Diretor");
+            break;
+        default:
+            console.log("Tipo de permissão inválido.");
+    }
+}
+</script>
+
+</body>
+</html>

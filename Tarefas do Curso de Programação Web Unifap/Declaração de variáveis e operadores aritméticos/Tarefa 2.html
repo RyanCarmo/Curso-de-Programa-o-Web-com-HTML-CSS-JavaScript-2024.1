@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cálculo da Média</title>
+</head>
+<body>
+
+<h1>Cálculo da Média</h1>
+
+<form id="numerosForm">
+    <label for="numero1">Número 1:</label>
+    <input type="number" id="numero1" required><br><br>
+
+    <label for="numero2">Número 2:</label>
+    <input type="number" id="numero2" required><br><br>
+
+    <label for="numero3">Número 3:</label>
+    <input type="number" id="numero3" required><br><br>
+
+    <label for="numero4">Número 4:</label>
+    <input type="number" id="numero4" required><br><br>
+
+    <button type="button" onclick="calcularMedia()">Calcular Média</button>
+</form>
+
+<script>
+var numero1 = parseFloat(prompt("Digite o primeiro número:"));
+var numero2 = parseFloat(prompt("Digite o segundo número (diferente do primeiro):"));
+var numero3 = parseFloat(prompt("Digite o terceiro número (diferente dos dois primeiros):"));
+var numero4 = parseFloat(prompt("Digite o quarto número (diferente dos três primeiros):"));
+
+var media = (numero1 + numero2 + numero3 + numero4) / 4;
+
+console.log("A média dos números é: " + media);
+
+</script>
+
+<p id="resultadoMedia"></p>
+
+</body>
+</html>

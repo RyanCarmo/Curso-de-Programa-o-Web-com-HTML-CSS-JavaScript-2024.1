@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Operações Matemáticas com Callbacks</title>
+</head>
+<body>
+
+<h1>Operações Matemáticas com Callbacks</h1>
+
+<script>
+const multiplicar = (x, y, callback) => {
+    const resultado = x * y;
+    callback(resultado);
+}
+const somar = (x, y, callback) => {
+    const resultado = x + y;
+    callback(resultado);
+}
+const exibirResultado = (resultado) => {
+    console.log("O resultado é:", resultado);
+}
+multiplicar(5, 3, exibirResultado);
+somar(10, 7, exibirResultado); 
+</script>
+
+</body>
+</html>

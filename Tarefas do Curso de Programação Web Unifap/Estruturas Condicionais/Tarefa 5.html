@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verificar Senha</title>
+</head>
+<body>
+
+<h1>Verificar Senha</h1>
+
+<form id="senhaForm">
+    <label for="senha">Digite a senha:</label>
+    <input type="password" id="senha" required><br><br>
+
+    <button type="button" onclick="verificarSenha()">Verificar Senha</button>
+</form>
+
+<script>
+function verificarSenha() {
+    var senhaDigitada = document.getElementById("senha").value;
+
+    if (senhaDigitada === "1234") {
+        alert("ACESSO PERMITIDO");
+    } else {
+        alert("ACESSO NEGADO");
+    }
+}
+</script>
+
+</body>
+</html>

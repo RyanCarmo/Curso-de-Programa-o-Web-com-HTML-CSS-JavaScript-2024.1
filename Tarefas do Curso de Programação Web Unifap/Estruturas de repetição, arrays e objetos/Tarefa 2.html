@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cálculo da Média</title>
+</head>
+<body>
+
+<h1>Cálculo da Média</h1>
+
+<script>
+
+var notas = [7.5, 8.0, 9.5];
+
+
+var soma = 0;
+for (var i = 0; i < notas.length; i++) {
+    soma += notas[i];
+}
+var media = soma / notas.length;
+
+
+document.write("<p>A média das notas é: " + media.toFixed(2) + "</p>");
+</script>
+
+</body>
+</html>

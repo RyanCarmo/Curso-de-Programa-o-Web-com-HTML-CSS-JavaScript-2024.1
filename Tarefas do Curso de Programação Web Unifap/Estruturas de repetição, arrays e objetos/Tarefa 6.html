@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soma e Média de Valores</title>
+</head>
+<body>
+
+<h1>Soma e Média de Valores</h1>
+
+<form id="valoresForm">
+    <label for="quantidade">Quantidade de valores a serem inseridos:</label>
+    <input type="number" id="quantidade" required><br><br>
+
+    <button type="button" onclick="lerValores()">Inserir Valores</button>
+</form>
+
+<script>
+function lerValores() {
+    var quantidade = parseInt(document.getElementById("quantidade").value);
+    var valores = [];
+
+    
+    for (var i = 0; i < quantidade; i++) {
+        var valor = parseFloat(prompt("Insira o valor " + (i + 1) + ":"));
+        valores.push(valor);
+    }
+
+    
+    var soma = 0;
+    for (var i = 0; i < valores.length; i++) {
+        soma += valores[i];
+    }
+
+    
+    var media = soma / valores.length;
+
+    
+    alert("Soma dos valores: " + soma.toFixed(2) + "\nMédia dos valores: " + media.toFixed(2));
+}
+</script>
+
+</body>
+</html>
